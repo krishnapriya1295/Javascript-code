@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="C:\Users\Krishnapriya\Downloads\bootstrap-4.2.1-dist\bootstrap-4.2.1-dist\css\bootstrap.css">
+<head>
+	<title>Smart Calc</title>
+</head>
+<body>
+	<style type="text/css">
+
+	.calcuborder{
+		background-color: orange;
+		margin-right: auto;
+		margin-top: 100px;
+		margin-left: auto;
+		width: 30%;
+		align-content: center;
+		border-radius: 30px;
+
+
+	}
+
+	#Displaybox{
+		width: 100%;
+		color: grey;
+		margin-top:20px;
+		
+
+	}
+
+	.buttons{
+		margin-left: 20px;
+		background: yellow;
+		border-radius: 30%;
+		width: 60px;
+	}
+
+		
+	</style>
+
+	<div class="calcuborder container">
+		<input id="Displaybox" type="text" name="display" placeholder="Enter Number">
+		<br><br>
+		<button class="buttons" onclick=update(1)>1</button>
+		
+		<button class="buttons" onclick=update(2)>2</button>
+		
+		<button class="buttons" onclick=update(3)>3</button>
+		
+		<button class="buttons" onclick=update("+")>+</button>
+		<br><br>
+
+		<button class="buttons" onclick=update(4)>4</button>
+		
+		<button class="buttons" onclick=update(5)>5</button>
+		
+		<button class="buttons" onclick=update(6)>6</button>
+		
+		<button class="buttons" onclick=update("-")>-</button>
+		<br><br>
+
+		<button class="buttons" onclick=update(7)>7</button>
+		
+		<button class="buttons" onclick=update(8)>8</button>
+		
+		<button class="buttons" onclick=update(9)>9</button>
+		
+		<button class="buttons" onclick=update("/")>/</button>
+		<br><BR>
+
+		<button class="buttons" onclick="reset()">C</button>
+		
+		<button class="buttons" onclick=update(0)>0</button>
+		
+		<button class="buttons" onclick=result()>=</button>
+		
+		<button class="buttons" onclick=update("*")>*</button>
+		<br><br>
+
+		<script type="text/javascript">
+			function update(n) {
+
+
+				document.getElementById("Displaybox").value+=n;
+				
+			}
+
+			function result() {
+				var a=eval(document.getElementById("Displaybox").value);
+				document.getElementById("Displaybox").value=a;
+			}
+
+			function reset(argument) {
+
+				document.getElementById("Displaybox").value='';
+			}
+			
+		</script>
+		
+
+	</div>
+
+</body>
+</html>
